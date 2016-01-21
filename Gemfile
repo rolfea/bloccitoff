@@ -38,3 +38,6 @@ gem 'turbolinks'
 
 # Authentication
 gem 'devise'
+
+# Figaro
+gem 'figaro', '1.0'
