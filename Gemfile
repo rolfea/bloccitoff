@@ -19,6 +19,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
+  gem 'factory_girl_rails', '~> 4.0'
 end
 
 # Use SCSS for stylesheets
@@ -36,8 +37,10 @@ gem 'jquery-rails'
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 
+
 # Authentication
 gem 'devise'
 
 # Figaro
 gem 'figaro', '1.0'
+gem 'bootstrap-sass'
