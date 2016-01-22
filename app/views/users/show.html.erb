@@ -1,2 +1,10 @@
 <p>Populate this view with User info</p>
 <%= "Email Address: #{@user.email}" %>
+<div>
+  <h3>Items</h3>
+  <%= render @user.items %>
+</div>
+
+<% if current_user %>
+  <%= render 'items/form', item: Item.new, user: @user %>
+<% end %>
