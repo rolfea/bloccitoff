@@ -1,7 +1,8 @@
-<div class="media">
+<div class="media" id="item-<%= item.id %>">
   <div class="media-body">
     <small>
       <%= item.name %>: Added <%= time_ago_in_words(item.created_at) %> ago
+      <%= link_to "", [item.user, item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
     </small>
   </div>
 </div>

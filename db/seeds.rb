@@ -11,7 +11,7 @@ users = User.all
     user: users.sample,
     name: Faker::Company.bs
   )
-  # item.update_attributes(:created_at, rand(10.minutes..7.day).ago)
+  item.update_attributes(created_at: rand(10.minutes..7.day).ago)
 end
 items = Item.all
 

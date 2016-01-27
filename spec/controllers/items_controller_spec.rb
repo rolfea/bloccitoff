@@ -4,7 +4,7 @@ RSpec.describe ItemsController, type: :controller do
   let(:my_user) { User.create!(email: "user@example.com", password: "helloworld") }
   let(:my_item) {Item.create!(name: "New Item Name", user: my_user) }
 
-  context "member creating an item for their list" do
+  context "member doing CRUD on an item for their list" do
     # before do
     #   create_session(my_user)
     # end
