@@ -29,6 +29,22 @@ class ItemsController < ApplicationController
     end
   end
 
+  def toggle
+    @user = User.find(params[:user_id])
+    @item = @user.items.find(params[:item_id])
+
+
+    if @item.complete
+      @item.complete = false
+      flash[:notice] = "Item was not completed"
+    else
+      @item.complete = true
+      flash[:notice] = "Item was completed"
+    end
+    @item.save
+    redirect_to @user
+  end
+
   private
 
   def item_params

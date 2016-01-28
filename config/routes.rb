@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
 
   resources :users, only: [] do
-    resources :items, only: [:create, :destroy]
+    resources :items, only: [:create, :destroy] do
+      put :toggle
+    end
   end
 
 
