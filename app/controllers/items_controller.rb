@@ -42,7 +42,11 @@ class ItemsController < ApplicationController
       flash[:notice] = "Item was completed"
     end
     @item.save
-    redirect_to @user
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   private

@@ -3,7 +3,7 @@
     <small>
       <span style="text-decoration:<%= item.complete ? 'line-through' : ''%>"><%=  item.name %></span>
           : Added <%= time_ago_in_words(item.created_at) %> ago
-      <%= link_to "#{item.complete ? 'Uncheck' : 'Check'}", user_item_toggle_path(item.user, item), method: :put %>
+      <%= link_to "#{item.complete ? 'Undo' : 'Finished'}", user_item_toggle_path(item.user, item), method: :put, remote: true %>
     </small>
   </div>
 </div>
